@@ -49,6 +49,14 @@ layout-service/
 ├── .env                            # Environment variables
 └── index.js                        # Entry point of the service
 
+| Method | Route                  | Auth Required | Description                             |
+| ------ | ---------------------- | ------------- | --------------------------------------- |
+| GET    | `/all-layout`          | ✅             | Fetch all layouts created by the user   |
+| GET    | `/layout/:id`          | ✅             | Get a specific layout by its ID         |
+| GET    | `/home-parameters/:id` | ✅             | Get home input parameters by layout ID  |
+| POST   | `/create-layout`       | ❌             | Generate layout from input parameters   |
+| POST   | `/save-layout`         | ✅             | Save a generated layout to the database |
+| DELETE | `/delete-layout/:id`   | ✅             | Delete a layout by its ID               |
 
 
 ---
