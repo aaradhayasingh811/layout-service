@@ -13,8 +13,8 @@ const {
 // add verfify wala baad me
 router.get("/all-layout",verifyToken, getAllLayouts);
 router.get("/layout/:id",getLayoutById);
-router.get("/home-parameters/:id",getHomeParameters);
-router.post("/create-layout", createLayout);
+router.get("/home-parameters/:id",verifyToken,getHomeParameters);
+router.post("/create-layout",verifyToken, createLayout);
 router.post("/save-layout",verifyToken, saveLayout);
 router.delete("/delete-layout/:id", verifyToken, deleteLayout);
 
