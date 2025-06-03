@@ -65,7 +65,7 @@ const saveLayout = async (req, res) => {
         return res.status(400).json({ error: "Name, boundaries, and rooms are required." });
         }
 
-        console.log(req.body);
+        // console.log(req.body);
     
         const layout = new Layout({
         name,
@@ -106,7 +106,7 @@ const getHomeParameters = async (req, res) => {
     }
 
     const data = inferInputFromOutput(layout);
-    console.log(data);
+    // console.log(data);
     res.status(200).json({ message: "Home parameters fetched successfully", data });
     
   } catch (error) {
