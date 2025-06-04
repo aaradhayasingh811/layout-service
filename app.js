@@ -15,6 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use('/api/v1', routes);
 
+app.get("/health",(req,res)=>{
+    res.status(200).json({
+        status: "success",
+        message: "Server is running"
+    });
+})
+
 connectDB();
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server is running on port ${process.env.PORT || 3000}`);
