@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const routes = require('./src/routes/layout.routes.js');
 const {connectDB} = require('./src/config/index.js');
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://architechx.netlify.app' || 'http://localhost:5173',
     credentials: true  
     }));
 app.use(express.json());
